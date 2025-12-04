@@ -104,10 +104,10 @@ $abilityDesc = [
   <nav class="navbar">
     <div class="nav-logo">Realm of the Minotaur</div>
     <ul class="nav-menu">
-      <li><a href="#">Profile</a></li>
+      <li><a href="/MINOTAUR/dashboard/profile.php">Profile</a></li>
       <li><a href="/MINOTAUR/dashboard/Hewan_peliharaan.php">Hewan Peliharaan</a></li>
       <li><a href="/MINOTAUR/dashboard/Gacha.php">Gacha</a></li>
-      <li><a href="#">Game</a></li>
+      <li><a href="/MINOTAUR/dashboard/game.php">Game</a></li>
     </ul>
   </nav>
 

@@ -1,12 +1,13 @@
 <?php
+// gacha.php
 session_start();
 
-// INIT TOKEN
+// TOKEN GACHA MAKSIMAL 3x
 if (!isset($_SESSION['gacha_token'])) {
     $_SESSION['gacha_token'] = 2;
 }
 
-// DATA
+// DATA HEWAN
 $gachaPool = [
     1 => "Minothorn Emberjaw",
     2 => "Frostmane Auroxveil",
@@ -26,7 +27,8 @@ $gachaImages = [
 $result = null;
 $message = "";
 
-// ▶ GACHA
+
+// ▶ PROSES GACHA
 if (isset($_POST['do_gacha'])) {
     if ($_SESSION['gacha_token'] > 0) {
 
@@ -40,33 +42,30 @@ if (isset($_POST['do_gacha'])) {
             'img'  => $gachaImages[$roll]
         ];
 
-        // INI YANG BENAR (disamakan dengan halaman hewan)
-        $_SESSION['new_pet'] = $result;
+        $_SESSION['last_gacha'] = $result; // simpan untuk tombol "Pakai Pet"
 
     } else {
         $message = "Token gacha kamu sudah habis!";
     }
 }
 
-// RESET TOKEN
+// ▶ RESET TOKEN
 if (isset($_POST['reset_token'])) {
     $_SESSION['gacha_token'] = 2;
     $message = "Token berhasil di-reset!";
 }
 
-// ▶ PAKE PET
+// ▶ SIMPAN PET KE FILE Hewan_peliharaan.php
 if (isset($_POST['use_pet'])) {
 
-    if (!isset($_SESSION['new_pet'])) {
-        $message = "Belum ada hasil gacha.";
+    if (!isset($_SESSION['last_gacha'])) {
+        $message = "Belum ada hasil gacha yang bisa dipakai.";
     } else {
-
-        // langsung arahkan ke halaman hewan
+        $_SESSION['pet_aktif'] = $_SESSION['last_gacha'];
         header("Location: /MINOTAUR/dashboard/Hewan_peliharaan.php");
         exit;
     }
 }
-?>
 
 ?>
 <!DOCTYPE html>
