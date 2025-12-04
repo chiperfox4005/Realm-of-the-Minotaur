@@ -1,0 +1,64 @@
+/* =============================
+   halaman START.PHP
+============================= */
+
+/* BACKGROUND MEDIEVAL */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+
+background-image: url('../image/depositphotos_5708587-stock-photo-village-castle-in-medieval-times.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Georgia", serif;
+}
+
+/* START BOX */
+.start-box {
+    width: 380px;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.65);
+    border-radius: 12px;
+    border: 2px solid #8b5a2b;
+    text-align: center;
+    color: #ffe5b4;
+    box-shadow: 0 0 15px rgba(0,0,0,0.7);
+}
+
+.start-box h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #ffcf91;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.start-box p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #f5d5a3;
+}
+
+/* START BUTTON */
+.start-btn {
+    padding: 12px 25px;
+    font-size: 18px;
+    background-color: #8b5a2b;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.start-btn:hover {
+    background-color: #a66c34;
+    transform: scale(1.05);
+}

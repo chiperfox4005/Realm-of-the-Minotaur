@@ -1,0 +1,86 @@
+/* =============================
+OPTIMIZED & CLEANED MEDIEVAL DASHBOARD CSS
+============================= */
+
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+
+html, body {
+height: 100%;
+}
+
+
+body {
+padding-top: 110px;
+background: url('../image/ruang tamu.jpg') center/cover fixed no-repeat;
+font-family: "Cinzel", serif;
+color: #fce9c8;
+text-rendering: optimizeLegibility;
+-webkit-font-smoothing: antialiased;
+}
+
+
+/* NAVBAR */
+.navbar {
+width: 100%;
+position: fixed;
+top: 0;
+left: 0;
+padding: 18px 40px;
+background: rgba(30, 15, 5, 0.92);
+border-bottom: 3px solid #8b5a2b;
+display: flex;
+justify-content: space-between;
+align-items: center;
+z-index: 1000;
+}
+
+
+.nav-logo {
+font-size: 28px;
+font-weight: 700;
+color: #ffdc9b;
+letter-spacing: 2px;
+text-shadow: 0 0 6px rgba(255, 210, 150, 0.4);
+}
+
+
+.nav-menu {
+display: flex;
+list-style: none;
+gap: 25px;
+}
+
+
+.nav-menu li a {
+color: #ffe9c4;
+padding: 6px 10px;
+border-radius: 6px;
+text-decoration: none;
+transition: 0.25s;
+}
+
+
+.nav-menu li a:hover {
+background: rgba(255, 230, 200, 0.25);
+box-shadow: inset 0 0 10px rgba(255, 220, 160, 0.4);
+}
+
+
+/* PAGE WRAPPER */
+.page-wrap {
+width: 92%;
+max-width: 1400px;
+margin: 18px auto 60px;
+}
+
+
+/* ABILITY BOX */
+.ability-box {
+padding: 20px;
+background: rgba(0, 0, 0, 0.56); }
